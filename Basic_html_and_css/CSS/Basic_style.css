@@ -20,7 +20,7 @@ h1{
     Select all squares in the array
 --------------------------------------*/
 .container .squares:nth-child(-n+4) {
-    background-image: ulr("../images/icons/smileyface2.png");
+    background-image: url("../images/icons/smileyface2.png");
     color: #fff;
     float: left;
     width: 100px;
@@ -67,7 +67,7 @@ Individually select a square in the array
 /*-------------------------------------------
 Hover, translate, and transform effects
 -------------------------------------------*/
-.container .squares:nth-child(-n+4) hover{
+.container .squares:nth-child(-n+4):hover{
     background-image: url("../images/icons/smileyface1.png");
     transform: scale(.5);
     animation-name: race;

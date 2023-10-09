@@ -8,6 +8,8 @@ img {
     border-style: dashed;
     border-color: red;
     border-width: 2px;
+    width: 600px;
+    height: 300px;
 }
 
 h3 {

@@ -1,0 +1,14 @@
+body {
+    background-color: tan;
+}
+
+
+
+
+@media screen and (max-width: 1750px) {
+    html {
+        background-color: blue;
+
+    }
+}
+

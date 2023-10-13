@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #000;
+    background-size: cover;
+
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 75%;
+    -o-object-fit: cover;
+        object-fit: cover;
+    -o-object-position: center;
+        object-position: center;
+}
+
+.videotext {
+    min-height: 100vh;
+    
+    margin-top: 10%;
+    margin-left: 10%;
+    overflow: hidden;
+
+
+}
+
+.videotext p {
+    background: none;
+    color: tan;
+    font-weight: 600;
+    margin: 1rem 1rem 0;
+    mix-blend-mode: overlay;
+    padding: 1px 1px;
+    top: 25%;
+    left: 25%;
+}
+

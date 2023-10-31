@@ -9,8 +9,8 @@ body {
     opacity: 1; /*This and transition affect the page loading fade in effect*/
     transition: 3s opacity; /* This causes a 3 second fade in */
     letter-spacing: .2vw; /*vw is a relative measurement, 1vw is equal to 1% of the viewport width*/
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5vw;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14px;
     overflow-x: hidden; /*This prevents the horizontal scroll bar from apprearing when the quote is hovered over */
     user-select: none; /*This prevents the text on hte webpage from being highlighted by the user*/
 }
@@ -22,7 +22,7 @@ body {
 /* Heading 1 elements */
 h1 {
     text-transform: uppercase; /* Capitalizing all h1 headings */
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center; /*Centering all h1 elements*/
     margin-top: 3%; /* adds small margin above h1 elements */
     color: black;
@@ -39,11 +39,13 @@ h1:hover {
 .white-text {
     color: #fff;
     padding-top: 10vh; /* Adds padding (equal to 10% of the viewport height) to the top of the Portfolio Title text*/
+   -webkit-text-stroke-width: .5px;
+   -webkit-text-stroke-color: black;
 }
 
 /* Paragraph elements */
 p {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: justify; 
     letter-spacing: .1vw; /* This expands the text slightly */
     font-size: 2.5vw; /* Relative font sizing equal to 2.5% of the viewport width */
@@ -60,6 +62,7 @@ p:hover {
 /* Center class - this applies to all centered text*/
 .center {
     text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /*Center align elements hover effect - This only affects the quote, github link, and footer */
@@ -88,6 +91,8 @@ img {
     height: 100%; /* Ensures all images stay within the height of their container */
     display: block; /* By specifying block display we can ensure out images are able to be centered */
     margin: auto auto auto auto; /* this centers all images */ 
+    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, 0.75); /*Adds shadow around slideshow images */
+
 }
 
 /* Image element hover effects*/
@@ -118,7 +123,7 @@ footer {
 
 /* The animation effect for moving the nav bar in from above the left of the screen on page load*/
 @keyframes moveNav {
-    from {left: -100vw} /*The navbar is starting off screen to the left */
+    from {left: -100vw;} /*The navbar is starting off screen to the left */
     to {left: 0vw;}/* This moves the navbar into place on the screen */
 }
 
@@ -140,7 +145,7 @@ footer {
 
 /* The animation effect for moving the nav bar links in from above the top of the screen on page load */
 @keyframes moveNavText {
-    from {top: -100vw} /* This sets the navbar text 100% above the viewport */
+    from {top: -100vw;} /* This sets the navbar text 100% above the viewport */
     to {top: 0vw;} /* This lowers the navbar text onto the navbar */
     }
 
@@ -177,15 +182,16 @@ footer {
 }
 
 /*Texts over the video*/
-.Video_text {
+.Video_Text {
     background: rgba(0, 0, 0, 0.5);
     color: white;
     width: 100%;
     height: 100vh;
-    padding: 2vh;
+    padding-top: 2vh;
     position: relative;
     -webkit-animation: moveVideoText 5.75s;
     animation: moveVideoText 5.75s;
+    
 }
 
 /* This animation effect causes the overlay video text to move up from the bottom of the page upon page load */
@@ -197,9 +203,7 @@ footer {
 /***End video styling****/
 
 /*****Slideshow Styling****/
-#Slideshow_Background {
-    background: rgba (255, 255, 255, 0.35); /*Slightly transparent background placed over video in background*/
-}
+
 
 .mySlides{
     display: none; /* This prevents images from being displayed, wi will use JS to display these*/
@@ -207,19 +211,27 @@ footer {
 
 /*Slideshow section / container */
 #Slideshow_Container {
-    width: 39.5vw;
+    width: 30vw;
     height: auto;
     padding-top: 4%;
     position: relative;
     margin:auto; /* Horizontally centers the container on page */
+
+}
+
+/*Remove the underline from the previouis and next butoons on the slideshow */
+#Slideshow_Container a {
+    text-decoration: none;
 }
 
 /* Images contained within the slideshow */
 .Slideshow_Images {
+    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, 0.75); /*Adds shadow around slideshow images */
     vertical-align: middle;
     height: auto;
-    box-shadow: 0px 5px 10px 12px rgba (0, 0, 0, 0.75); /*Adds shadow around slideshow images */
     width: 100%;
+    border-radius: 10px;
+
 }
 
 /*Next and previous buttons */
@@ -241,6 +253,7 @@ footer {
 .Next {
     right: 0; /* This moves the next button to right side of slideshow container*/
     border-radius: 3px 0 0 3px; 
+
 }
 
 /*Hover effect on slide show buttons */
@@ -251,13 +264,13 @@ footer {
 
 /*Slideshow text */
 .text {
-    color: white;
-    padding: 1vw;
+    color: black;
+    padding: 0;
     position: absolute; /*Ensures text is positioned within the image*/
     bottom: 0; /*Sets text at bottom of image*/
     width: 100%;
     text-align: center;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: .1vw;
     font-size: 1.5vw;
     background-color: rgba (0, 0, 0, 0.75);
@@ -297,7 +310,7 @@ footer {
 }
 
 @keyframes fade {
-    from {opacity:.4;}
+    from {opacity: .4;}
     to {opacity: 1;}
 }
 /* End Slideshow Styling */
@@ -310,18 +323,24 @@ footer {
 .Column_1 {
     float: left;
     width: 50%; /*Columns take up half the page*/
-    
-    padding: 1/6%;
-    height: 450px; /*possibly adjust*/
+    padding: 1.2%;
+    height: 475px; /*possibly adjust*/
     background-color: #f2f2f2;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
 }
 
 .Column_2 {
     float: left;
     width: 50%;
     padding:  1.6%;
-    height: 450px;
+    height: 475px;
     background-color: #4d4d4d;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.Column_1 p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /* Insterts something after the content of selected elements (elements with class "Row" */
@@ -335,7 +354,7 @@ footer {
 
 /***Contact form styling***/
 /*Button used to open contact form-fixed at bottom of page */
-.Pop_up_Button {
+.Pop_Up_Button {
     position: fixed;
     bottom: 1.75vw;
     right: 1.75vw;
@@ -380,7 +399,7 @@ viewport*/
 .form-container input[type=text] {
     width: 100%;
     padding: .93vw;
-    margin: .6vw 0;
+    margin: .6vw 0 .6vw 0;
     border: none;
     background: Gainsboro;
     font-size: 1vw;
@@ -444,7 +463,7 @@ button:hover, .form-container .btn:hover {
 
 @media screen and (min-width: 528px) and (max-width: 660px) {
     p {
-        font-size: 3.75vw;
+        font-size: 3.5vw;
     }
 }
 

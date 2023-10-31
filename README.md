@@ -9,6 +9,6 @@ Tech Academy HTML and CSS projects
 [My personal portfolio website]
 (https://www.davidbossdesigns.co/)
 
-[one-page surf instruction website]()
+[one-page surf instruction website](https://github.com/DaveBoss510/Daves-html-and-css-projects/tree/main/Basic_html_and_css/One-Page%20Website)
 
-Tattooer portfolio website
+[Tattooer portfolio website]()

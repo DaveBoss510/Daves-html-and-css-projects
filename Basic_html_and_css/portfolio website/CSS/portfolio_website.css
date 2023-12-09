@@ -3,14 +3,15 @@
 html {
     scroll-behavior: smooth; /*This ensures that the page scrolling is smooth when the buttons on the nav bar are clicked*/
 }
+header {
+    left: 0;
+}
 /* Body */
 body {
     margin: 0%; /* This ensures our site displays all the way to the edge of the browser screen */
     opacity: 1; /*This and transition affect the page loading fade in effect*/
     transition: 3s opacity; /* This causes a 3 second fade in */
     letter-spacing: .2vw; /*vw is a relative measurement, 1vw is equal to 1% of the viewport width*/
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 14px;
     overflow-x: hidden; /*This prevents the horizontal scroll bar from apprearing when the quote is hovered over */
     user-select: none; /*This prevents the text on hte webpage from being highlighted by the user*/
 }
@@ -21,11 +22,12 @@ body {
      
 /* Heading 1 elements */
 h1 {
-    text-transform: uppercase; /* Capitalizing all h1 headings */
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family:'Amatic SC';
     text-align: center; /*Centering all h1 elements*/
     margin-top: 3%; /* adds small margin above h1 elements */
     color: black;
+    font-size: 80px;
+    margin-bottom: -15px;
 }
 
 /* Heading 1 element hover effect */
@@ -37,15 +39,17 @@ h1:hover {
 
 /* Styling for Portfolio Title Text */
 .white-text {
-    color: #fff;
+    color: #f6c6c6;
+    font-family: 'Amatic SC';
+    font-size: 50px;
     padding-top: 10vh; /* Adds padding (equal to 10% of the viewport height) to the top of the Portfolio Title text*/
    -webkit-text-stroke-width: .5px;
-   -webkit-text-stroke-color: black;
+   -webkit-text-stroke-color: rgb(252, 250, 250);
 }
 
 /* Paragraph elements */
 p {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Amatic SC';
     text-align: justify; 
     letter-spacing: .1vw; /* This expands the text slightly */
     font-size: 2.5vw; /* Relative font sizing equal to 2.5% of the viewport width */
@@ -62,8 +66,18 @@ p:hover {
 /* Center class - this applies to all centered text*/
 .center {
     text-align: center;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Amatic SC';
+    font-size: 40px;
 }
+
+.fcenter {
+    text-align: center;
+    font-family: Amatic SC;
+    font-size: 50px;
+    color: #e6103b;
+    font-weight: bold;
+}
+
 
 /*Center align elements hover effect - This only affects the quote, github link, and footer */
 .center:hover {
@@ -78,11 +92,7 @@ a {
     text-decoration: underline; /* This ensures all links are underlined */
 }
 
-/*Quotation Elements**/
-q {
-    font-style: italic;
-   
-}
+
 /**Image Elements**/
 img {
     filter: grayscale(75%); /*This rids our pictures of 75% of their color */
@@ -104,7 +114,7 @@ img:hover {
 /***Styling for footer***/
 footer {
     padding: 2%; /* This gives the footer padding that is equal to 2% of the width of the element's area*/
-    background-color: white;
+    background-color: #bae610;
 }
 /*--End of general styling --*/
 
@@ -112,13 +122,16 @@ footer {
 .Navbar {
     overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar
     is not displayed */
-    background-color: black; /* This colors the navbar black */
+    background-color: #bae610; /* This colors the navbar  */
     position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
     top: 0; /* This ensures no space is displayed above the navbar*/
     width: 100%; /* This makes the navbar span the entire width of the page */
     z-index: 1; /* This ensures other elements don't display over the navbar */
     -webkit-animation: moveNav 5s; /*S Safari 4.0 -8.0 */
     animation: moveNav 5s; /* This makes the moveNav animation last 5 seconds */
+    font-family: 'Ribeye Marrow';
+    
+    
 }
 
 /* The animation effect for moving the nav bar in from above the left of the screen on page load*/
@@ -132,10 +145,10 @@ footer {
     float: left; /* This specifies that the text floats on the left on the navbar */
     display: block; /* This ensures that other text will be displayed on the same line or row
     instead of a new line*/
-    color: white;
+    color: black;
     padding: .75vw 1vw; /*Adds padding around text */
     text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Ribeye Marrow';
     font-size: 1.5vw; 
     text-align: center;
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
@@ -151,17 +164,15 @@ footer {
 
 /*Navbar hover effects */
 .Navbar a:hover {
-    background-color: #f4f4f4;
-    color: black;
+    
+    color: #e6103b;
     font-weight: bold;
     cursor: pointer;
+    margin-left: 5px;
     transition: 0.5s ease-in; /* Creates a smooth transition for the hover trigger */
 }
 
-/* Navbar home button */
-.Navbar a.active { /* This targets the a element on the navbar with the "active" class */
-    background-color: darkgray;
-}
+
 /***End Navbar styling****/
 
 /***Video Styling***/
@@ -185,6 +196,7 @@ footer {
 .Video_Text {
     background: rgba(0, 0, 0, 0.5);
     color: white;
+    font-family: 'Amatic SC';
     width: 100%;
     height: 100vh;
     padding-top: 2vh;
@@ -270,14 +282,18 @@ footer {
     bottom: 0; /*Sets text at bottom of image*/
     width: 100%;
     text-align: center;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: .1vw;
-    font-size: 1.5vw;
-    background-color: rgba (0, 0, 0, 0.75);
-    font-weight: bold;
-    border-radius: 0px 0px 7px 7px;
+    font-family:'Ribeye Marrow';
 }
 
+.text1 {
+    color: white;
+    padding: 0;
+    position: absolute; /*Ensures text is positioned within the image*/
+    bottom: 0; /*Sets text at bottom of image*/
+    width: 100%;
+    text-align: center;
+    font-family:'Ribeye Marrow';
+}
 /*Styling of the dots under the slideshow */
 .dot {
     cursor: pointer;
@@ -293,7 +309,8 @@ footer {
 
 /*Hover effect for slideshow dots */
 .active, .dot:hover {
-    background-color: black; /* Sets color of dots when active or hovered over*/
+    background-color: #bae610;
+     /* Sets color of dots when active or hovered over*/
 }
 
 /*Fading animation for slideshow */
@@ -325,24 +342,53 @@ footer {
     width: 50%; /*Columns take up half the page*/
     padding: 1.2%;
     height: 475px; /*possibly adjust*/
-    background-color: #f2f2f2;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 16px;
+    background-color: #bae610;
+    font-family: 'Amatic SC';
+    font-size: 20px;
+    font-weight: bold;
 }
 
+.Column_1 h1 {
+    font-size: 60px;
+}
+
+
+
+.Column_1 .center1 {
+    font-family: Amatic SC;
+    font-size: 75px;
+    text-align: center;
+
+}
 .Column_2 {
     float: left;
     width: 50%;
     padding:  1.6%;
     height: 475px;
-    background-color: #4d4d4d;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #bae610;
+    font-family: 'Amatic SC';
+    font-weight: bold;
+    
+    
+}
+.Column_2 iframe {
+    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, 0.75);
 }
 
-.Column_1 p {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+.Column_2 img {
+    width: 50%;
+    margin-top: 5%;
 }
 
+.YTcontainer {
+    
+    width: 100%;
+}
+
+.surftext {
+    font-family: 'Amatic SC';
+    font-size: 25px;
+}
 /* Insterts something after the content of selected elements (elements with class "Row" */
 .Row:after {
     content: ""; /* When left blank, allows footer to be displayed */
@@ -359,7 +405,7 @@ footer {
     bottom: 1.75vw;
     right: 1.75vw;
     width: 25vw;
-    background-color: white;
+    background-color: #bae610;
     color: black;
     border: solid black;
     cursor: pointer;
@@ -386,13 +432,14 @@ viewport*/
     position: fixed;
     bottom: .5vw;
     right: .5vw;
+    font-family: 'Amatic SC';
 }
 
 /*Form styling*/
 .form-container {
     max-width: 49vw;
     padding: 1vw;
-    background-color: white;
+    background-color: #bae610;
 }
 
 /* Input fields */
@@ -403,14 +450,15 @@ viewport*/
     border: none;
     background: Gainsboro;
     font-size: 1vw;
+    font-family: 'Amatic SC';
 }
 
 /*General Styling for all buttons */
 button {
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Ribeye Marrow';
     letter-spacing: .3vw;
     font-size: 1.5vw;
-    font-weight: bold;
+    font-weight: normal;
     padding: 1.5vw;
     cursor: pointer;
     width: 100%;
@@ -419,8 +467,8 @@ button {
 
 /*Hover effect for contact and submit buttons */
 button:hover, .form-container .btn:hover {
-    color: white;
-    background-color: black;
+    color: #e6103b;
+    background-color: #0d6be5;
     transition-duration: 1s;
     -webkit-transition-duration: 1s;
     border-color: silver;
@@ -445,14 +493,18 @@ button:hover, .form-container .btn:hover {
 /*Styling for close button on hover */
 .form-container .cancel:hover {
     color: white;
-    background-color: darkred;
+    background-color: #e6103b;
     transition-duration: 1s;
     -webkit-transition-duration: 1s;
     border-color: black;
 }
 
-/*End of Contact Form Styling */
 
+/*End of Contact Form Styling */
+ 
+.fcenter p {
+    color:#e6103b
+}
 /* Media Query Section */
 /* media rules for paragraph font size for different screen sizes */
 @Media screen and (max-width: 527px) {
@@ -548,3 +600,4 @@ fits in the column*/
 }
 
 /*End of Media Query Secion */
+

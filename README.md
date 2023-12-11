@@ -1,8 +1,6 @@
 # Daves-html-and-css-projects
 Tech Academy HTML and CSS projects
 
-# HTML AND CSS PROJECTS
-
 #### This is a display of sample websites I made using HTML and CSS.
 
 

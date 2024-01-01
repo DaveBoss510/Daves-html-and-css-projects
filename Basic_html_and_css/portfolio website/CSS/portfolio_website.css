@@ -60,6 +60,16 @@ p {
     padding-right: 1vw;
 }
 
+footer a {
+    font-family: 'Amatic SC';
+    font-weight: 700;
+    text-align: justify; 
+    letter-spacing: .1vw; /* This expands the text slightly */
+    font-size: 2.5vw; /* Relative font sizing equal to 2.5% of the viewport width */
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
 /* Paragraph element hover effect */
 p:hover {
     transition: transform 1s; /*This makes the trasform effect last 1 second */

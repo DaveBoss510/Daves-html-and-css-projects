@@ -40,7 +40,7 @@ h1:hover {
 
 /* Styling for Portfolio Title Text */
 .white-text {
-    color: #f6c6c6;
+    color: #ffffff;
     font-family: 'Amatic SC';
     font-weight: 700;
     font-size: 50px;
@@ -168,6 +168,7 @@ footer {
     }
 
 /*Navbar hover effects */
+
 .Navbar a:hover {
     
     color: #e6103b;
@@ -190,12 +191,12 @@ footer {
     z-index: -1;
 }
 
-/* Screens 576px and smaller will not display the background video */
+/* Screens 576px and smaller will not display the background video 
 @media screen and (max-width: 576px) {
     #Typing_Video {
         display: none;
     }
-}
+} */
 
 /*Texts over the video*/
 .Video_Text {
@@ -223,9 +224,10 @@ footer {
 /*****Slideshow Styling****/
 
 
-.mySlides{
+.mySlides {
     display: none; /* This prevents images from being displayed, wi will use JS to display these*/
 }
+
 
 /*Slideshow section / container */
 #Slideshow_Container {
@@ -338,10 +340,10 @@ footer {
 }
 /* End Slideshow Styling */
 
-/****Table styling**/
+/****Table styling*/
 * {
     box-sizing: border-box;
-}
+} 
 
 .Column_1 {
     float: left;
@@ -365,7 +367,7 @@ footer {
 .Column_1 .center1 {
     font-family: Amatic SC;
     font-weight: 700;
-    font-size: 75px;
+    font-size: 50px;
     text-align: center;
 
 }
@@ -573,7 +575,7 @@ button:hover, .form-container .btn:hover {
     p {
         font-size: 1.35vw;
     }
-}
+} 
 
 /*Media rule for navbar links for different screen sizes */
 /* Screens 1080px and smaller will display navbar links equally distributed */
@@ -596,12 +598,53 @@ button:hover, .form-container .btn:hover {
 }
 
 /*Media rules to increase the size of the columns for larger screens */
-@media screen and (min-width: 1725px) {
+@media screen and (max-width: 749px) {
+    .Column_1 {
+        width: 100%;
+        padding-bottom: 100px;
+    }
+    .Column_2 {
+        width: 100%;
+    }
+    .Slideshow_Container {
+        width: 100vw;
+    }
+
+    #words, .YTcontainer{
+        display: none;
+    }
+
+    .white-text{
+        font-size: 35px;
+    }
+
+    .center{
+        font-size: 30px;
+    }
+
+    img {
+        filter: none;
+    }
+
+    .Column_2 {
+        padding-bottom: 50px;
+    }
+
+    .Pop_Up_Button {
+        width: 35vw;
+        height: 20vw;
+        font-size: 30px;
+    }
+
+} 
+
+
+@media screen and (min-width: 1750px) {
     .Column_1 {
         height: 550px;
     }
     .Column_2 {
-        height: 550px;
+        height: 550px
     }
 }
 
@@ -613,5 +656,18 @@ fits in the column*/
     }
 }
 
+@media screen and (min-width: 749px) {
+    
+        .YTcontainerM{
+             display: none;
+    }
+}
+
+
+
+
+
+
 /*End of Media Query Secion */
+
 
